@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import Header from '@/components/common/header/Header';
 
 const inter = Inter({
    subsets: ['latin'],
@@ -26,7 +27,10 @@ export default async function LocaleLayout({
    return (
       <html lang={locale}>
          <body className={`${inter.className} font-sans antialiased`}>
-            <NextIntlClientProvider>{children}</NextIntlClientProvider>
+            <NextIntlClientProvider>
+               <Header />
+               {children}
+            </NextIntlClientProvider>
          </body>
       </html>
    );
