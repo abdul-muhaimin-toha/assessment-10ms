@@ -92,7 +92,7 @@ const ThumbnailSlide = ({
   alt: string;
 }) => (
   <div
-    className={`max-h-8 max-w-15 overflow-hidden border-2 transition-all duration-200 ${
+    className={`aspect-video max-h-14 overflow-hidden border-2 transition-all duration-200 sm:max-h-16 md:max-h-8 md:max-w-15 ${
       isActive
         ? "border-green-500 shadow-md"
         : "border-transparent hover:border-green-400"
@@ -114,7 +114,7 @@ function ProductShowcase({ media }: Props) {
   const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
 
   return (
-    <div className="col-span-1 mb-4 flex w-full flex-col gap-4 p-1">
+    <div className="col-span-1 mb-4 flex w-full flex-col gap-4 md:p-1">
       <div className="relative">
         <NavigationButtons />
         <Swiper

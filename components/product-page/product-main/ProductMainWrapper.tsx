@@ -10,8 +10,10 @@ export interface Props {
 
 function ProductMainWrapper({ title, description, instructor }: Props) {
   return (
-    <div className="col-span-2 w-full pr-16">
-      <ProductDetails title={title} description={description} />
+    <div className="col-span-2 w-full px-4 md:pr-8 xl:pr-16">
+      <div className="hidden md:block">
+        <ProductDetails title={title} description={description} />
+      </div>
       {instructor && <ProductInstructor instructor={instructor} />}
     </div>
   );

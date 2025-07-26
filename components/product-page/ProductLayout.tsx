@@ -13,15 +13,17 @@ function ProductLayout({ course }: Props) {
 
   return (
     <main className="relative w-full">
-      <div className="product-bg h-80" />
-      <div className="container-content relative z-10">
-        <div className="grid w-full grid-cols-[1fr_1fr_400px] pt-10">
+      <div className="product-bg absolute top-0 left-0 hidden md:block md:h-[360px] lg:h-80" />
+      <div className="container-content relative z-10 px-0 md:px-4">
+        <div className="md:items-start] relative flex w-full flex-col-reverse md:grid md:grid-cols-[1fr_1fr_350px] md:pt-10 lg:grid-cols-[1fr_1fr_400px]">
           <ProductMainWrapper
             title={course.title}
             description={course.description}
             instructor={instructor}
           />
           <ProductSidebarWrapper
+            title={course.title}
+            description={course.description}
             media={course.media}
             cta={course.cta_text}
             checklist={course.checklist}

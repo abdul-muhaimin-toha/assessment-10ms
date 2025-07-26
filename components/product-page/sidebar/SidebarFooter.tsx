@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 
 function SidebarFooter() {
   return (
-    <div className="mt-4 flex w-full items-center justify-between text-sm text-gray-500">
+    <div className="mt-4 hidden w-full flex-wrap items-center justify-between gap-2 text-sm text-gray-500 md:flex">
       <p>কোর্সটি সম্পর্কে বিস্তারিত জানতে</p>
       <Link
         href="tel:16910"

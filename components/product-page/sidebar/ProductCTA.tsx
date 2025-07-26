@@ -7,7 +7,7 @@ type Props = {
 
 function ProductCTA({ ctaDetails }: Props) {
   return (
-    <div className="flex flex-col gap-5 p-4">
+    <div className="flex flex-col gap-5 p-4 py-8 md:py-4">
       <div className="flex items-center gap-2">
         <span className="text-2xl font-semibold text-black">৳1000</span>
         <del className="text-lg font-medium text-gray-900">1500</del>

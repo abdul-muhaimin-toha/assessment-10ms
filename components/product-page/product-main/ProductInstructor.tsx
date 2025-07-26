@@ -10,7 +10,7 @@ type Props = {
 
 function ProductInstructor({ instructor }: Props) {
   return (
-    <div className="my-10 flex w-full flex-col gap-4">
+    <div className="my-8 flex w-full flex-col gap-4 md:my-10">
       <h3 className="text-2xl font-semibold text-black">{instructor.name}</h3>
       {instructor.values.map((item) => (
         <InstructorCard key={item.slug} item={item} />
@@ -23,7 +23,7 @@ export default ProductInstructor;
 
 const InstructorCard = ({ item }: { item: Instructor }) => {
   return (
-    <div className="flex w-full items-center gap-4 rounded border p-5">
+    <div className="flex w-full flex-col items-start gap-4 rounded border p-5 sm:flex-row sm:items-center">
       <Image
         src={item.image}
         alt={item.name}

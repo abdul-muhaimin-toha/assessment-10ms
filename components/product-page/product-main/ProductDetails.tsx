@@ -8,8 +8,8 @@ export interface Props {
 
 function ProductDetails({ title, description }: Props) {
   return (
-    <div className="flex h-[280px] w-full flex-col justify-center gap-2 text-gray-400">
-      <h1 className="text-4xl font-semibold text-white">{title}</h1>
+    <div className="flex h-auto w-full flex-col justify-center gap-2 text-gray-300 md:h-[320px] lg:h-[280px]">
+      <h1 className="text-2xl font-semibold text-white md:text-4xl">{title}</h1>
       {parse(description)}
     </div>
   );
