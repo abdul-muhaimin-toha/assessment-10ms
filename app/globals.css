@@ -123,7 +123,12 @@
 
 @layer components {
    .container-screen {
-      @apply w-full bg-red-100/50 mx-auto py-3 px-4 md:px-7;
+      @apply w-full  mx-auto px-4 md:px-7;
       max-width: 1440px;
+   }
+
+   .container-content {
+      @apply w-full mx-auto px-4;
+      max-width: 1200px;
    }
 }

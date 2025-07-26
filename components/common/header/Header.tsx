@@ -5,8 +5,8 @@ import LanguageSwitcher from './LanguageSwitcher';
 function Header() {
    return (
       <header className="w-full shadow">
-         <div className="container-screen bg-transparent">
-            <div className="flex flex-row justify-between gap-3">
+         <div className="container-screen">
+            <div className="flex flex-row justify-between gap-3 py-3">
                <Link href="/">
                   <Image
                      src="/10mslogo.svg"
