@@ -10,17 +10,17 @@ type Props = {
   checklist: ProductData["checklist"];
 };
 
-const ProductSidebarWrapper: React.FC<Props> = ({ media, cta, checklist }) => {
+function ProductSidebarWrapper({ media, cta, checklist }: Props) {
   return (
-    <div className="col-span-1 w-full">
+    <aside className="col-span-1 w-full">
       <div className="w-full border bg-white">
         <ProductShowcase media={media} />
         <ProductCTA ctaDetails={cta} />
         <ProductCheckList checklist={checklist} />
       </div>
       <SidebarFooter />
-    </div>
+    </aside>
   );
-};
+}
 
 export default ProductSidebarWrapper;

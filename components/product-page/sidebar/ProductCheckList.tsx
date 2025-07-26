@@ -5,12 +5,10 @@ type Props = {
   checklist: ProductData["checklist"];
 };
 
-const ProductCheckList: React.FC<Props> = ({ checklist }) => {
+function ProductCheckList({ checklist }: Props) {
   return (
     <div className="flex w-full flex-col gap-4 p-4">
-      <h5 className="text-xl font-semibold text-gray-900">
-        এই কোর্সে যা থাকছে
-      </h5>
+      <h4 className="text-xl font-semibold text-black">এই কোর্সে যা থাকছে</h4>
       <div className="flex w-full flex-col gap-3">
         {checklist?.map((item) => (
           <div key={item.id} className="flex w-full items-center gap-4">
@@ -29,6 +27,6 @@ const ProductCheckList: React.FC<Props> = ({ checklist }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ProductCheckList;

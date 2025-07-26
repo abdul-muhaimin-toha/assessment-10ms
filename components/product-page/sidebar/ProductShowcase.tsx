@@ -108,7 +108,7 @@ const ThumbnailSlide = ({
   </div>
 );
 
-const ProductShowcase: React.FC<Props> = ({ media }) => {
+function ProductShowcase({ media }: Props) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
@@ -170,6 +170,6 @@ const ProductShowcase: React.FC<Props> = ({ media }) => {
       </Swiper>
     </div>
   );
-};
+}
 
 export default ProductShowcase;

@@ -1,5 +1,5 @@
 import { fetchProductData } from "@/actions/product-actions";
-import ProductLayout from "@/components/productPage/ProductLayout";
+import ProductLayout from "@/components/product-page/ProductLayout";
 import { ProductData } from "@/types/product";
 import { getMetaContent } from "@/lib/utils";
 

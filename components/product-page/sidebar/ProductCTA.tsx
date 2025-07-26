@@ -5,12 +5,12 @@ type Props = {
   ctaDetails: ProductData["cta_text"];
 };
 
-const ProductCTA: React.FC<Props> = ({ ctaDetails }) => {
+function ProductCTA({ ctaDetails }: Props) {
   return (
     <div className="flex flex-col gap-5 p-4">
       <div className="flex items-center gap-2">
         <span className="text-2xl font-semibold text-black">৳1000</span>
-        <del className="text-lg font-medium text-gray-700">1500</del>
+        <del className="text-lg font-medium text-gray-900">1500</del>
         <span className="rounded-full rounded-l-none bg-green-500 px-3 py-1 text-sm font-medium text-white">
           • 500 টাকা ছাড়
         </span>
@@ -23,6 +23,6 @@ const ProductCTA: React.FC<Props> = ({ ctaDetails }) => {
       </Button>
     </div>
   );
-};
+}
 
 export default ProductCTA;
