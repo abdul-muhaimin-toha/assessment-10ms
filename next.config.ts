@@ -1,8 +1,11 @@
-import { NextConfig } from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
+import { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-   htmlLimitedBots: /.*/,
+  htmlLimitedBots: /.*/,
+  images: {
+    domains: ["cdn.10minuteschool.com"],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();
