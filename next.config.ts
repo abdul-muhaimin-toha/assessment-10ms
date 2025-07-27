@@ -4,7 +4,16 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   htmlLimitedBots: /.*/,
   images: {
-    domains: ["cdn.10minuteschool.com", "s3.ap-southeast-1.amazonaws.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.10minuteschool.com",
+      },
+      {
+        protocol: "https",
+        hostname: "s3.ap-southeast-1.amazonaws.com",
+      },
+    ],
   },
 };
 

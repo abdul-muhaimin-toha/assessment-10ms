@@ -25,7 +25,6 @@ function ProductMainWrapper({
   features,
   keyPointers,
 }: Props) {
-  console.log(keyPointers);
   return (
     <div className="col-span-2 w-full px-4 md:pr-8 xl:pr-16">
       <div className="hidden md:block">

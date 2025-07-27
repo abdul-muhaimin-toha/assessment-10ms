@@ -1,4 +1,4 @@
-import { BaseSection } from "@/types/product";
+import { SectionType, TypedSection } from "@/types/product";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -14,3 +14,12 @@ export const getMetaContent = (
   const meta = metaData.find((meta) => meta.value === metaValue);
   return meta ? meta.content : defaultValue;
 };
+
+export function findSection<T extends SectionType>(
+  sections: TypedSection[],
+  type: T,
+): Extract<TypedSection, { type: T }> | undefined {
+  return sections.find((section) => section.type === type) as
+    | Extract<TypedSection, { type: T }>
+    | undefined;
+}
