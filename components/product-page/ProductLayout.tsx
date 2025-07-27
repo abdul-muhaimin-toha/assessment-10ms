@@ -11,15 +11,20 @@ function ProductLayout({ course }: Props) {
     (section) => section.type === "instructors",
   ) as BaseSection<Instructor> | undefined;
 
+  const features = course.sections.find(
+    (section) => section.type === "features",
+  ) as BaseSection<Instructor> | undefined;
+
   return (
     <main className="relative w-full">
       <div className="product-bg absolute top-0 left-0 hidden md:block md:h-[360px] lg:h-80" />
       <div className="container-content relative z-10 px-0 md:px-4">
-        <div className="md:items-start] relative flex w-full flex-col-reverse md:grid md:grid-cols-[1fr_1fr_350px] md:pt-10 lg:grid-cols-[1fr_1fr_400px]">
+        <div className="relative flex w-full flex-col-reverse md:grid md:grid-cols-[1fr_1fr_350px] md:items-start md:pt-10 lg:grid-cols-[1fr_1fr_400px]">
           <ProductMainWrapper
             title={course.title}
             description={course.description}
             instructor={instructor}
+            features={features}
           />
           <ProductSidebarWrapper
             title={course.title}

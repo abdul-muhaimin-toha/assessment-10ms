@@ -114,7 +114,7 @@ function ProductShowcase({ media }: Props) {
   const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
 
   return (
-    <div className="col-span-1 mb-4 flex w-full flex-col gap-4 md:p-1">
+    <section className="col-span-1 mb-4 flex w-full flex-col gap-4 md:p-1">
       <div className="relative">
         <NavigationButtons />
         <Swiper
@@ -168,7 +168,7 @@ function ProductShowcase({ media }: Props) {
           );
         })}
       </Swiper>
-    </div>
+    </section>
   );
 }
 

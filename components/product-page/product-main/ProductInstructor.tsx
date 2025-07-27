@@ -23,7 +23,7 @@ export default ProductInstructor;
 
 const InstructorCard = ({ item }: { item: Instructor }) => {
   return (
-    <div className="flex w-full flex-col items-start gap-4 rounded border p-5 sm:flex-row sm:items-center">
+    <section className="flex w-full flex-col items-start gap-4 rounded border p-5 sm:flex-row sm:items-center">
       <Image
         src={item.image}
         alt={item.name}
@@ -41,6 +41,6 @@ const InstructorCard = ({ item }: { item: Instructor }) => {
         </Link>
         {parse(item.description)}
       </div>
-    </div>
+    </section>
   );
 };

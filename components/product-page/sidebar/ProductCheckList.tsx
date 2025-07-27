@@ -7,7 +7,7 @@ type Props = {
 
 function ProductCheckList({ checklist }: Props) {
   return (
-    <div className="flex w-full flex-col gap-4 p-4 py-8 md:py-4">
+    <section className="flex w-full flex-col gap-4 p-4 py-8 md:py-4">
       <h4 className="text-xl font-semibold text-black">এই কোর্সে যা থাকছে</h4>
       <div className="flex w-full flex-col gap-3">
         {checklist?.map((item) => (
@@ -25,7 +25,7 @@ function ProductCheckList({ checklist }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
