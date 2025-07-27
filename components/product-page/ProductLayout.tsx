@@ -1,4 +1,10 @@
-import { BaseSection, Instructor, ProductData } from "@/types/product";
+import {
+  BaseSection,
+  FeatureItem,
+  Instructor,
+  PointerItem,
+  ProductData,
+} from "@/types/product";
 import ProductSidebarWrapper from "./sidebar/ProductSidebarWrapper";
 import ProductMainWrapper from "./product-main/ProductMainWrapper";
 
@@ -13,7 +19,11 @@ function ProductLayout({ course }: Props) {
 
   const features = course.sections.find(
     (section) => section.type === "features",
-  ) as BaseSection<Instructor> | undefined;
+  ) as BaseSection<FeatureItem> | undefined;
+
+  const keyPointers = course.sections.find(
+    (section) => section.type === "pointers",
+  ) as BaseSection<PointerItem> | undefined;
 
   return (
     <main className="relative w-full">
@@ -25,6 +35,7 @@ function ProductLayout({ course }: Props) {
             description={course.description}
             instructor={instructor}
             features={features}
+            keyPointers={keyPointers}
           />
           <ProductSidebarWrapper
             title={course.title}
