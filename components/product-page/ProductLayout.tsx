@@ -1,4 +1,5 @@
 import {
+  AboutItem,
   BaseSection,
   ExclusiveFeatureItem,
   FeatureItem,
@@ -30,6 +31,10 @@ function ProductLayout({ course }: Props) {
     (section) => section.type === "feature_explanations",
   ) as BaseSection<ExclusiveFeatureItem> | undefined;
 
+  const aboutInformation = course.sections.find(
+    (section) => section.type === "about",
+  ) as BaseSection<AboutItem> | undefined;
+
   return (
     <main className="relative w-full">
       <div className="product-bg absolute top-0 left-0 hidden md:block md:h-[360px] lg:h-80" />
@@ -42,6 +47,7 @@ function ProductLayout({ course }: Props) {
             features={features}
             keyPointers={keyPointers}
             exclusiveFeatures={exclusiveFeatures}
+            aboutInformation={aboutInformation}
           />
           <ProductSidebarWrapper
             title={course.title}

@@ -1,4 +1,5 @@
 import {
+  AboutItem,
   BaseSection,
   ExclusiveFeatureItem,
   FeatureItem,
@@ -11,6 +12,7 @@ import ProductInstructor from "./ProductInstructor";
 import ProductFeatures from "./ProductFeatures";
 import ProductKeyPointers from "./ProductKeyPointers";
 import ProductExclusiveFeatures from "./ProductExclusiveFeatures";
+import ProductAbout from "./ProductAbout";
 
 export interface Props {
   title: ProductData["title"];
@@ -19,6 +21,7 @@ export interface Props {
   features?: BaseSection<FeatureItem>;
   keyPointers?: BaseSection<PointerItem>;
   exclusiveFeatures?: BaseSection<ExclusiveFeatureItem>;
+  aboutInformation?: BaseSection<AboutItem>;
 }
 
 function ProductMainWrapper({
@@ -28,6 +31,7 @@ function ProductMainWrapper({
   features,
   keyPointers,
   exclusiveFeatures,
+  aboutInformation,
 }: Props) {
   return (
     <div className="col-span-2 w-full px-4 md:pr-8 xl:pr-16">
@@ -40,6 +44,7 @@ function ProductMainWrapper({
       {exclusiveFeatures && (
         <ProductExclusiveFeatures exclusiveFeatures={exclusiveFeatures} />
       )}
+      {aboutInformation && <ProductAbout aboutInformation={aboutInformation} />}
     </div>
   );
 }
