@@ -12,8 +12,8 @@ function ProductInstructor({ instructor }: Props) {
   return (
     <div className="my-8 flex w-full flex-col gap-4 md:my-10">
       <h3 className="text-2xl font-semibold text-black">{instructor.name}</h3>
-      {instructor.values.map((item) => (
-        <InstructorCard key={item.slug} item={item} />
+      {instructor.values.map((item, idx) => (
+        <InstructorCard key={idx} item={item} />
       ))}
     </div>
   );

@@ -38,13 +38,25 @@ function ProductMainWrapper({
       <div className="hidden md:block">
         <ProductDetails title={title} description={description} />
       </div>
-      {instructor && <ProductInstructor instructor={instructor} />}
-      {features && <ProductFeatures features={features} />}
-      {keyPointers && <ProductKeyPointers keyPointers={keyPointers} />}
-      {exclusiveFeatures && (
-        <ProductExclusiveFeatures exclusiveFeatures={exclusiveFeatures} />
+      {instructor && instructor.values && instructor.values.length > 0 && (
+        <ProductInstructor instructor={instructor} />
       )}
-      {aboutInformation && <ProductAbout aboutInformation={aboutInformation} />}
+      {features && features.values && features.values.length > 0 && (
+        <ProductFeatures features={features} />
+      )}
+      {keyPointers && keyPointers.values && keyPointers.values.length > 0 && (
+        <ProductKeyPointers keyPointers={keyPointers} />
+      )}
+      {exclusiveFeatures &&
+        exclusiveFeatures.values &&
+        exclusiveFeatures.values.length > 0 && (
+          <ProductExclusiveFeatures exclusiveFeatures={exclusiveFeatures} />
+        )}
+      {aboutInformation &&
+        aboutInformation.values &&
+        aboutInformation.values.length > 0 && (
+          <ProductAbout aboutInformation={aboutInformation} />
+        )}
     </div>
   );
 }
