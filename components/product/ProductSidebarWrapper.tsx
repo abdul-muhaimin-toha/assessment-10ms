@@ -1,9 +1,9 @@
 import type { ProductData } from "@/types/product";
-import ProductCheckList from "./ProductCheckList";
-import ProductCTA from "./ProductCTA";
-import SidebarFooter from "./SidebarFooter";
-import ProductShowcase from "./ProductShowcase";
-import ProductDetails from "../product-main/ProductDetails";
+import ProductShowcase from "./sidebar/ProductShowcase";
+import ProductDetails from "./product-main/ProductDetails";
+import ProductCTA from "./sidebar/ProductCTA";
+import ProductCheckList from "./sidebar/ProductCheckList";
+import SidebarFooter from "./sidebar/SidebarFooter";
 
 type Props = {
   title: ProductData["title"];

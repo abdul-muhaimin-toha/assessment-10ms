@@ -1,15 +1,7 @@
-import {
-  AboutItem,
-  BaseSection,
-  ExclusiveFeatureItem,
-  FeatureItem,
-  Instructor,
-  PointerItem,
-  ProductData,
-} from "@/types/product";
-import ProductSidebarWrapper from "./sidebar/ProductSidebarWrapper";
-import ProductMainWrapper from "./product-main/ProductMainWrapper";
+import { ProductData } from "@/types/product";
 import { getSectionByType } from "@/lib/utils";
+import ProductMainWrapper from "./ProductMainWrapper";
+import ProductSidebarWrapper from "./ProductSidebarWrapper";
 
 type Props = {
   course: ProductData;

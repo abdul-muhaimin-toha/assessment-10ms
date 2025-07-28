@@ -7,12 +7,12 @@ import {
   PointerItem,
   ProductData,
 } from "@/types/product";
-import ProductDetails from "./ProductDetails";
-import ProductInstructor from "./ProductInstructor";
-import ProductFeatures from "./ProductFeatures";
-import ProductKeyPointers from "./ProductKeyPointers";
-import ProductExclusiveFeatures from "./ProductExclusiveFeatures";
-import ProductAbout from "./ProductAbout";
+import ProductDetails from "./product-main/ProductDetails";
+import ProductInstructor from "./product-main/ProductInstructor";
+import ProductFeatures from "./product-main/ProductFeatures";
+import ProductKeyPointers from "./product-main/ProductKeyPointers";
+import ProductExclusiveFeatures from "./product-main/ProductExclusiveFeatures";
+import ProductAbout from "./product-main/ProductAbout";
 
 export interface Props {
   title: ProductData["title"];
