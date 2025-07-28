@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Engineer Assessment - 10 Minute School
 
-## Getting Started
+This project was developed as a technical assessment for the Frontend Engineer position at 10 Minute School. It demonstrates the implementation of a modern, responsive, and feature-rich web application using a robust and scalable tech stack.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **Modern & Responsive UI:** Built with **Tailwind CSS 4**, the application is fully responsive, providing an optimal experience across desktops, tablets, and mobile devices.
+*   **Interactive Components:** Features dynamic UI elements like accordions (`@radix-ui/react-accordion`) and carousels (`swiper`) to create an engaging and professional user experience.
+*   **Component-Based Architecture:** The code is organized into modular and reusable components, promoting clean code, scalability, and ease of maintenance.
+*   **Internationalization Ready:** Integrated with `next-intl`, the project is architected for easy localization to support multiple languages.
+*   **Code Quality & Consistency:** Enforces a strict code style using **ESLint** and **Prettier**, ensuring the codebase is readable, consistent, and free of common errors.
+*   **Latest Technologies:** Leverages the latest versions of **Next.js (v15)** and **React (v19)** to take advantage of new features and performance improvements.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+The project is built using a curated set of modern frontend technologies:
 
-To learn more about Next.js, take a look at the following resources:
+*   **Framework:** [Next.js](https://nextjs.org/) v15.4.4
+*   **UI Library:** [React](https://reactjs.org/) v19.1.0
+*   **Language:** [TypeScript](https://www.typescriptlang.org/) v5
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) v4
+*   **UI Primitives:** [Radix UI](https://www.radix-ui.com/)
+*   **Carousel:** [Swiper](https://swiperjs.com/)
+*   **Icons:** [Lucide React](https://lucide.dev/)
+*   **Internationalization:** [next-intl](https://next-intl-docs.vercel.app/)
+*   **Linting & Formatting:** [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Getting Started
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ensure you have **Node.js (version 20 or higher)** and **npm** installed on your machine.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/abdul-muhaimin-toha/assessment-10ms.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd assessment-10ms
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+The application will be available at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📜 Available Scripts
+
+*   `npm run dev`: Starts the development server.
+*   `npm run build`: Creates a production-ready build.
+*   `npm run start`: Starts the production server (requires a prior build).
+*   `npm run lint`: Lints the codebase for quality and style issues.
+
+---
+
+## ✍️ Author & Contact
+
+**Abdul Muhaimin Toha**
+
+*   **Email:** `abdulmuhaimintoha.business@gmail.com`
+*   **Phone:** `+88 01839 6429 56`
+*   **Portfolio:** [abdulmuhaimintoha.vercel.app](https://abdulmuhaimintoha.vercel.app/)
+*   **GitHub:** [@abdul-muhaimin-toha](https://github.com/abdul-muhaimin-toha)
+*   **LinkedIn:** [in/abdul-muhaimin-toha](http://www.linkedin.com/in/abdul-muhaimin-toha)
