@@ -81,7 +81,7 @@ The Docker setup provides:
 
 2.  **Run the Docker container:**
     ```bash
-    docker run -p 3000:3000 assessment-10ms
+    docker run -dp 3000:3000 assessment-10ms
     ```
 
 The application will be accessible at [http://localhost:3000](http://localhost:3000).
