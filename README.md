@@ -63,6 +63,31 @@ The application will be available at [http://localhost:3000](http://localhost:30
 
 ---
 
+## 🐳 Deployment with Docker
+
+This project includes a production-ready, multi-stage `Dockerfile` to make deployment simple and consistent.
+
+The Docker setup provides:
+*   **Optimized Caching:** Faster builds by caching dependencies.
+*   **Small Production Image:** A minimal and secure final image using an Alpine base.
+*   **Security:** Runs the application as a non-root user.
+
+### Running with Docker
+
+1.  **Build the Docker image:**
+    ```bash
+    docker build -t assessment-10ms .
+    ```
+
+2.  **Run the Docker container:**
+    ```bash
+    docker run -p 3000:3000 assessment-10ms
+    ```
+
+The application will be accessible at [http://localhost:3000](http://localhost:3000).
+
+---
+
 ## 📜 Available Scripts
 
 *   `npm run dev`: Starts the development server.
