@@ -27,7 +27,7 @@ export default ProductKeyPointers;
 function ProductPointerItem({ text }: ItemProps) {
   return (
     <div className="flex items-start gap-2">
-      <Check className="h-5 w-5 shrink-0 text-blue-900" />
+      <Check className="h-5 w-5 shrink-0 text-blue-600" />
       <p className="text-base text-gray-900">{text}</p>
     </div>
   );

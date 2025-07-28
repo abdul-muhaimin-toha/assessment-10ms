@@ -1,5 +1,6 @@
 import {
   BaseSection,
+  ExclusiveFeatureItem,
   FeatureItem,
   Instructor,
   PointerItem,
@@ -25,6 +26,10 @@ function ProductLayout({ course }: Props) {
     (section) => section.type === "pointers",
   ) as BaseSection<PointerItem> | undefined;
 
+  const exclusiveFeatures = course.sections.find(
+    (section) => section.type === "feature_explanations",
+  ) as BaseSection<ExclusiveFeatureItem> | undefined;
+
   return (
     <main className="relative w-full">
       <div className="product-bg absolute top-0 left-0 hidden md:block md:h-[360px] lg:h-80" />
@@ -36,6 +41,7 @@ function ProductLayout({ course }: Props) {
             instructor={instructor}
             features={features}
             keyPointers={keyPointers}
+            exclusiveFeatures={exclusiveFeatures}
           />
           <ProductSidebarWrapper
             title={course.title}
