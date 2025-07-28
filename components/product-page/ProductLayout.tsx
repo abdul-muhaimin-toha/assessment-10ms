@@ -9,31 +9,21 @@ import {
 } from "@/types/product";
 import ProductSidebarWrapper from "./sidebar/ProductSidebarWrapper";
 import ProductMainWrapper from "./product-main/ProductMainWrapper";
+import { getSectionByType } from "@/lib/utils";
 
 type Props = {
   course: ProductData;
 };
 
 function ProductLayout({ course }: Props) {
-  const instructor = course.sections.find(
-    (section) => section.type === "instructors",
-  ) as BaseSection<Instructor> | undefined;
-
-  const features = course.sections.find(
-    (section) => section.type === "features",
-  ) as BaseSection<FeatureItem> | undefined;
-
-  const keyPointers = course.sections.find(
-    (section) => section.type === "pointers",
-  ) as BaseSection<PointerItem> | undefined;
-
-  const exclusiveFeatures = course.sections.find(
-    (section) => section.type === "feature_explanations",
-  ) as BaseSection<ExclusiveFeatureItem> | undefined;
-
-  const aboutInformation = course.sections.find(
-    (section) => section.type === "about",
-  ) as BaseSection<AboutItem> | undefined;
+  const instructor = getSectionByType(course.sections, "instructors");
+  const features = getSectionByType(course.sections, "features");
+  const keyPointers = getSectionByType(course.sections, "pointers");
+  const exclusiveFeatures = getSectionByType(
+    course.sections,
+    "feature_explanations",
+  );
+  const aboutInformation = getSectionByType(course.sections, "about");
 
   return (
     <main className="relative w-full">

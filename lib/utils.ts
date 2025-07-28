@@ -15,11 +15,16 @@ export const getMetaContent = (
   return meta ? meta.content : defaultValue;
 };
 
-export function findSection<T extends SectionType>(
+type ExtractSectionByType<T extends SectionType> = Extract<
+  TypedSection,
+  { type: T }
+>;
+
+export function getSectionByType<T extends SectionType>(
   sections: TypedSection[],
   type: T,
-): Extract<TypedSection, { type: T }> | undefined {
-  return sections.find((section) => section.type === type) as
-    | Extract<TypedSection, { type: T }>
-    | undefined;
+): ExtractSectionByType<T> | undefined {
+  return sections.find(
+    (section): section is ExtractSectionByType<T> => section.type === type,
+  );
 }

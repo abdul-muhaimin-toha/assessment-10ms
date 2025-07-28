@@ -5,6 +5,7 @@ import { getMetaContent } from "@/lib/utils";
 
 import { Metadata } from "next";
 import { getLocale } from "next-intl/server";
+import Head from "next/head";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -46,6 +47,34 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HomePage() {
   const locale = await getLocale();
   const data: ProductData = await fetchProductData(locale);
+  // Filter valid schema objects and parse JSON
+  const schemas = data.seo.schema
+    .filter((item) => item.meta_value.trim() !== "")
+    .map((item) => {
+      try {
+        return JSON.parse(item.meta_value);
+      } catch {
+        console.warn("Invalid JSON in schema:", item.meta_value);
+        return null;
+      }
+    })
+    .filter(Boolean);
 
-  return <ProductLayout course={data} />;
+  return (
+    <>
+      <Head>
+        {schemas.map((schema, idx) => (
+          <script
+            key={idx}
+            type="application/ld+json"
+            // JSON stringify the parsed object with indentation for readability
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema, null, 2),
+            }}
+          />
+        ))}
+      </Head>
+      <ProductLayout course={data} />
+    </>
+  );
 }
