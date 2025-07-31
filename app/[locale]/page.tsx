@@ -2,15 +2,24 @@ import { fetchProductData } from "@/actions/product-actions";
 import ProductLayout from "@/components/product/ProductLayout";
 import { ProductData } from "@/types/product";
 import { getMetaContent } from "@/lib/utils";
-
 import { Metadata } from "next";
-import { getLocale } from "next-intl/server";
 import Head from "next/head";
 import ErrorHandler from "@/components/common/ErrorHandler";
+import { routing } from "@/i18n/routing";
 
-export async function generateMetadata(): Promise<Metadata> {
+export const revalidate = 7200;
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   try {
-    const locale = await getLocale();
+    const { locale } = await params;
     const product = await fetchProductData(locale);
     const seo = product.seo;
 
@@ -59,9 +68,13 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   try {
-    const locale = await getLocale();
+    const { locale } = await params;
     const data: ProductData = await fetchProductData(locale);
 
     const schemas = data.seo.schema

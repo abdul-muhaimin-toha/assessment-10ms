@@ -14,7 +14,6 @@ export const fetchProductData = async (
         "X-TENMS-SOURCE-PLATFORM": "web",
         Accept: "application/json",
       },
-      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
